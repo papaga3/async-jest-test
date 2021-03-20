@@ -18,11 +18,17 @@ module.exports = {
                 // Loader for css files
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"]
+            },
+            {
+                // Loader for ts and tsx files
+                test: /\.(ts|tsx)$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: "awesome-typescript-loader"
             }
         ]
     },
     resolve: { 
-        extensions: ["*", ".js", ".jsx"],
+        extensions: ["*", ".js", ".jsx", "ts", "tsx"],
         // Set alias for hot reloading react-dom (can hot reload react hooks)
         alias: {"react-dom" : "@hot-loader/react-dom"}
     },
