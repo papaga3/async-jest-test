@@ -28,7 +28,7 @@ module.exports = {
         ]
     },
     resolve: { 
-        extensions: ["*", ".js", ".jsx", "ts", "tsx"],
+        extensions: ["*", ".js", ".jsx", ".ts", ".tsx"],
         // Set alias for hot reloading react-dom (can hot reload react hooks)
         alias: {"react-dom" : "@hot-loader/react-dom"}
     },
