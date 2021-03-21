@@ -1,5 +1,6 @@
 import React from "react";
 import { AppBar, Toolbar, IconButton, List, ListItem, ListItemText} from "@material-ui/core"
+import { makeStyles } from "@material-ui/core/styles"
 import { Home } from "@material-ui/icons"
 import "./NavBar.css";
 
@@ -9,11 +10,22 @@ const navLinks: {title: string, path: string}[] = [
     {title: "Contact", path: "#"}
 ];
 
+const useStyles = makeStyles(
+    {
+        linkText: {
+            textDecoration: "none",
+            textTransform: "uppercase",
+            color: "white"
+        }
+    }
+);
+
 const NavBar = () => {
+    const classes = useStyles();
     const navList = navLinks.map(
         ({title, path}) => {
             return(
-                <a href={path} key={title}>
+                <a href={path} key={title} className={classes.linkText}>
                     <ListItem>
                         <ListItemText primary={title}/>
                     </ListItem>
@@ -21,7 +33,6 @@ const NavBar = () => {
             );
         }
     );
-    console.log("Debug: ", navList);
     return (
         <AppBar position="static">
             <Toolbar>
