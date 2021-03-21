@@ -1,5 +1,6 @@
 import React from "react";
-import { AppBar, Toolbar, IconButton, List, ListItem, ListItemText} from "@material-ui/core"
+import { AppBar, Toolbar, IconButton, 
+    List, ListItem, ListItemText, Container} from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 import { Home } from "@material-ui/icons"
 import "./NavBar.css";
@@ -12,10 +13,15 @@ const navLinks: {title: string, path: string}[] = [
 
 const useStyles = makeStyles(
     {
+        navDisplayFlex: {
+            display: "flex",
+            justifyContent: "space-between"
+        },
         linkText: {
             textDecoration: "none",
             textTransform: "uppercase",
-            color: "white"
+            color: "white",
+            display: "inline-block"
         }
     }
 );
@@ -36,12 +42,14 @@ const NavBar = () => {
     return (
         <AppBar position="static">
             <Toolbar>
-                <IconButton edge="start" color="inherit" aria-label="home">
-                    <Home font-size="large"/>
-                </IconButton>
-                <List component="nav" aria-labelledby="main nav">
-                    {navList}       
-                </List>
+                <Container className={classes.navDisplayFlex}>
+                    <IconButton edge="start" color="inherit" aria-label="home">
+                        <Home font-size="large"/>
+                    </IconButton>
+                    <List component="nav" aria-labelledby="main nav">
+                        {navList}       
+                    </List>
+                </Container>
            </Toolbar>
         </AppBar>
     );
