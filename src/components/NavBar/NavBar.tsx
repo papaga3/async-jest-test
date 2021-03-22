@@ -2,8 +2,7 @@ import React from "react";
 import { AppBar, Toolbar, IconButton, 
     List, ListItem, ListItemText, Container} from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
-import { Home } from "@material-ui/icons"
-import "./NavBar.css";
+import { Home } from "@material-ui/icons";
 
 const navLinks: {title: string, path: string}[] = [
     {title: "Blog", path: "#"},
@@ -44,7 +43,7 @@ const NavBar = () => {
             <Toolbar>
                 <Container className={classes.navDisplayFlex}>
                     <IconButton edge="start" color="inherit" aria-label="home">
-                        <Home font-size="large"/>
+                        <Home fontSize="large"/>
                     </IconButton>
                     <List component="nav" aria-labelledby="main nav">
                         {navList}       

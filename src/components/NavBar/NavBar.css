@@ -1,8 +1,0 @@
-/* Styling sheet for NavBar component */
-.navbar-list li {
-    display: inline-block;
-    list-style: none;
-}
-.navbar-list li a {
-    text-decoration: none;
-}
