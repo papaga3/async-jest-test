@@ -3,6 +3,9 @@ The MIT License (MIT)
 
 applies to:
  - material-ui Copyright (c) 2014 Call-Em-All
+ - jest Copyright (c) Facebook, Inc. and its affiliates.
+ - enzyme Copyright (c) 2015-present Airbnb, Inc. and contributors
+
 ------------------------------------------------------------------------
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
